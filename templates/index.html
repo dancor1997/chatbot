@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot LisaRobot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script> var static_url = "{{ url_for('static', filename='')}}"; </script>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='imagenes/bg.png') }}" alt="">
+
+    <div class="open-chat-button" id="openChatButton">
+        <img src="{{ url_for('static', filename='imagenes/ChatBot-AMI.png') }}" alt="Icono del Chatbot">
+    </div>
+
+    <div class="chatbot">
+        <header>
+            <img src="{{ url_for('static', filename='imagenes/logolinalca.png') }}" alt="">
+            <h2>Linalca Informática </br> Lisa - Asistente virtual
+            </h2> 
+                        
+            <div class="icon-button-container">
+                <button id="minimizeButton" class="icon-button"><i class="fas fa-window-minimize"></i></button>
+                <button id="reloadButton" class="icon-button"><i class="fas fa-redo"></i></button>
+            </div>
+        </header>
+
+        <ul class="chatbox"> 
+                      
+        </ul>
+        
+        <div class="chat-input">
+            <textarea id="chatInput" placeholder="Ingresa tu mensaje..."></textarea>
+            <span id="send-btn" class="material-symbols-outlined">send</span>
+        </div>
+    </div>
+    
+    <script type="module" src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

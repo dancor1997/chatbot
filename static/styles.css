@@ -1,0 +1,389 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial";
+} 
+body img{
+    width: 100%;
+    height: 100;
+}
+
+p, label, option {
+    font-family: "Arial";
+}
+
+h2 {
+    font-family: "Arial bold";
+}
+
+.open-chat-button {
+    /* Mantén la posición fija y ajusta el espacio con márgenes */
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    margin-right: 70px; /* Agrega un margen derecho para crear espacio */
+    width: 10%;
+    max-width: 60px;
+    height: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    
+}
+
+.open-chat-button img {
+    width: 100px;
+    height: 100px;
+    background-size: 60px;
+    border-radius: 100% !important;
+    margin: -30px;    
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.chatbot {
+    /* Ajusta el ancho del chatbot considerando el espacio del botón */
+    position: fixed;
+    right: 5%;
+    bottom: 15%;
+    width: calc(90% - 70px); /* Resta el margen del botón del ancho total */
+    max-width: 420px;
+    overflow: hidden;
+    background: #ffff;
+    border-radius: 15px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 1);
+    display: none;
+}
+.chatbot header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinea el h2 y los botones en el header */
+    background: #0E7ABF;
+    padding: 16px 20px;
+}
+.chatbot header h2{
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+    flex: 1; /* Ocupa todo el espacio disponible */
+    margin: 10; /* Elimina el margen por defecto del h2 */
+   
+}
+
+.chatbot header p{
+    color:  white;
+    text-align: left;
+    font-size: 0.95rem;
+    padding: 12px 16px;
+    border-radius: 10px 10px 0 10px;
+}
+.chatbot header img{
+    width: 65px;
+    height: 50px;
+    align-self: flex-start;
+    text-align: left;
+    align-items: center; /* Centrar horizontalmente */
+    line-height: 50px;
+    margin: 0 10px 7px 0;
+    border-radius: 4px;
+  
+}
+.icon-button-container {
+    display: flex;
+    align-items: center; /* Centra los botones verticalmente */
+}
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white; /* Color de los íconos */
+    font-size: 1.5rem;
+    margin-left: 10px; /* Espacio entre los botones */
+}
+
+.icon-button:hover {
+    color: #f2f2f2; /* Color al hacer hover en los íconos */
+}
+.chatbot .chatbox{
+    background-image: url('./imagenes/textura_chat.png');
+    background-size: 100%; /* Esto ajustará la textura para que cubra toda la página */
+    background-repeat: no-repeat; /* Esto evitará que la textura se repita */
+    height: 580px;
+    overflow-y: auto;
+    padding: 30px 20px 100px;
+}
+.chatbox .chat{
+    display: flex;
+}
+.chatbox .chat p{
+    color:  white;
+    max-width: 75%;
+    white-space: pre-wrap;
+    font-size: 0.95rem;
+    padding: 12px 16px;
+    border-radius: 10px 10px 0 10px;
+    
+}
+
+.chatbox .salida img{
+    width: 50px;
+    height: 50px;
+    align-self: flex-start;
+    text-align: center;
+    align-items: center; /* Centrar horizontalmente */
+    line-height: 50px;
+    margin: 0 10px 7px 0;
+    border-radius: 4px;
+    
+}
+.chatbox .salida p{
+
+    color: black;
+    background: #e9e7e7;
+    border-radius: 10px 10px 10px 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.chatbox .entrada img{
+    width: 50px;
+    height: 50px;
+    align-self: flex-start;
+    text-align: center;
+    align-items: center; /* Centrar horizontalmente */
+    line-height: 50px;
+    margin: 0 10px 7px 0;
+    border-radius: 4px;
+    
+}
+.chatbox .entrada p{
+
+    color: black;
+    background: #cdcdcd;
+    border-radius: 10px 10px 10px 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.chatbox .entrada{
+    margin: 10px;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+
+}
+
+.form {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    text-align: center;
+}
+
+.form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+   
+}
+
+.form input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.form input[type="text, email, tel"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #121111;
+    border-radius: 4px;
+    
+}
+
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #121111;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.form select {
+    
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #121111;
+    border-radius: 4px;
+    margin-bottom: 5px;
+   
+}
+
+/* Estilos para el botón "Enviar" */
+.enviar-button {
+    background-color: #D0131F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 5px; /* Agrega un espacio superior al botón */
+}
+
+.enviar-button:hover {
+    background-color: #45a049;
+}
+
+.checklist-container {
+   
+    background-color: #f5f5f5;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.checklist-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.checklist-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.checklist-button {
+    background-color: #D0131F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 5px; /* Agrega un espacio superior al botón */
+}
+
+.checklist-button:hover {
+    background-color: #45a049;
+}
+
+.checklist-button:hover {
+    background-color: #45a049;
+}
+
+.option {
+    max-width: 80%;
+    word-wrap: break-word;
+    color: white;
+    display: block;
+    margin: 10px 0;
+    margin-left: 55px;
+    padding: 12px 16px;
+    background-color: #0D68b1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    
+    
+}
+
+.option:hover {
+    background-color: #45a049;
+}
+
+.subopcion {
+    max-width: 80%;
+    word-wrap: break-word;
+    display: block;
+    color: white;    
+    margin: 10px 0;
+    margin-left: 55px;
+    padding: 12px 16px;
+    background-color: #0D68b1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    
+    
+}
+
+.subopcion:hover {
+    background-color: #45a049;
+}
+
+.chatbot .chat-input{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: url('./imagenes/textura_chat.png');
+    background-size: cover; /* Esto ajustará la textura para que cubra toda la página */
+    background-repeat: no-repeat; /* Esto evitará que la textura se repita */
+    padding: 5px 20px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    gap: 5px;
+}
+
+.chat-input textarea{
+    height: 55px;
+    width: 100%;
+    border: none;
+    outline: none;
+    max-height: 160px;
+    font-size: 0.95rem;
+    resize: none;
+    padding: 16pz 15px 16px 0;
+    margin: 10px;
+    text-align: left;
+  
+ 
+   
+}
+.chat-input span{
+    align-self: flex-end;
+    height: 55px;
+    line-height: 55px;
+    color: #724ae8;
+    font-size: 1.35rem;
+    cursor: pointer;
+    
+}
+@media(max-width: 768px){
+    .chatbot{
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .chatbot .chatbox{
+        height: 90%;
+    }
+}
